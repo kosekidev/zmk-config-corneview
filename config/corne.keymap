@@ -3,10 +3,11 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
+ 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include "zmk-helpers/helper.h"
 
 / {
     keymap {
@@ -64,14 +65,14 @@
         };
 
         accents_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &kp CARET  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans     &trans    &trans  &trans  &trans
-            >;
+            display-name = "Accents";
 
-            label = "Accents";
+            bindings = <
+&trans  &trans  &trans  &ccedille  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 };
