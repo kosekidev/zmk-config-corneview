@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/36.h"
-#include "zmk-helpers/unicode-chars/french.dtsi"
 #include "keys_fr.h"
 
 / {
@@ -71,7 +70,7 @@
             display-name = "Accents";
 
             bindings = <
-&trans  &trans  &fr_c_cedilla  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
