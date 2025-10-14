@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
- 
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -11,6 +11,27 @@
 #include "keys_fr.h"
 
 / {
+    behaviors {
+        kp_tap_kp_hold: kp_tap_kp_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_TAP_KP_HOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <140>;
+            flavor = "balanced";
+        };
+
+        kp_tap_mo_hold: kp_tap_mo_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_TAP_MO_HOLD";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <140>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -24,10 +45,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp FR_C_CEDILLA   &kp COMMA  &kp LS(DOT)  &kp P  &kp Y             &kp F    &kp G  &kp C     &kp R  &kp L  &kp BSPC
-&kp LCTRL  &kp FR_A_GRAVE      &kp O      &kp E        &kp U  &kp I             &kp D    &kp H  &kp T     &kp N  &kp S  &kp SQT
-&kp LSHFT  &kp COLON  &kp Q      &kp J        &kp K  &kp X             &kp B    &kp M  &kp W     &kp V  &kp Z  &kp ESC
-                                 &mo 1        &mo 2  &kp LEFT_SHIFT    &kp RET  &mo 2  &kp RALT
+&none  &kp FR_SEMICOLON  &kp FR_COMMA  &kp FR_PERIOD  &kp FR_P                    &kp FR_Y          &kp FR_F                 &kp FR_G                        &kp FR_C  &kp FR_R  &kp FR_L  &none
+&none  &kp FR_A          &kp FR_O      &kp FR_E       &kp FR_U                    &kp FR_I          &kp FR_D                 &kp FR_H                        &kp FR_T  &kp FR_N  &kp FR_S  &none
+&none  &kp FR_COLON      &kp FR_Q      &kp FR_J       &kp FR_K                    &kp FR_X          &kp FR_B                 &kp FR_M                        &kp FR_W  &kp FR_V  &kp FR_Z  &none
+                                       &mo 1          &kp_tap_mo_hold 2 FR_UNDER  &kp LEFT_SHIFT    &kp_tap_mo_hold 3 ENTER  &kp_tap_kp_hold RCTRL FR_SPACE  &kp RALT
             >;
         };
 
@@ -41,10 +62,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1          &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &studio_unlock  &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                          &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
+&kp LSHFT   &trans        &trans        &trans        &trans        &bt BT_CLR_ALL    &trans    &trans    &trans    &trans     &trans  &trans
+                                        &kp LGUI      &trans        &kp SPACE         &kp RET   &trans    &kp RALT
             >;
         };
 
@@ -58,16 +79,15 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp AMPS   &kp LS(PRCNT)  &kp LPAR  &kp RPAR  &kp TILDE    &kp EXCL      &kp EXCL   &kp LS(QMARK)  &kp AT    &kp SPACE   &kp BSPC
-&kp LCTRL  &kp DLLR   &kp POUND      &kp LBRC  &kp RBRC  &kp PIPE     &kp EQUAL     &kp SQT    &kp DQT        &kp LT    &kp LS(GT)  &kp GRAVE
-&kp LSHFT  &kp GRAVE  &kp STAR       &kp LBKT  &kp RBKT  &kp X        &kp LS(PLUS)  &kp MINUS  &kp UNDER      &kp FSLH  &kp BSLH    &kp TILDE
-                                     &kp LGUI  &trans    &kp SPACE    &kp RET       &trans     &kp RALT
+&kp TAB        &kp FR_AMPERSAND  &kp FR_PERCENT   &kp FR_LEFT_PARENTHESIS  &kp FR_RIGHT_PARENTHESIS  &kp FR_TILDE    &kp FR_EURO   &kp FR_EXCLAMATION  &kp FR_QUESTION       &kp AT            &kp FR_DEGREE        &kp BSPC
+&kp FR_DOLLAR  &kp DLLR          &kp FR_HASH      &kp FR_LEFT_BRACE        &kp FR_RIGHT_BRACE        &kp FR_PIPE     &kp FR_EQUAL  &kp FR_SQT          &kp FR_DOUBLE_QUOTES  &kp FR_LESS_THAN  &kp FR_GREATER_THAN  &kp GRAVE
+&kp LSHFT      &kp FR_GRAVE      &kp FR_ASTERISK  &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET      &trans          &kp FR_PLUS   &kp FR_MINUS        &kp FR_UNDER          &kp FR_SLASH      &kp FR_BACKSLASH     &kp TILDE
+                                                  &kp LGUI                 &trans                    &kp SPACE       &kp RET       &trans              &kp RALT
             >;
         };
 
         accents_layer {
             display-name = "Accents";
-
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
