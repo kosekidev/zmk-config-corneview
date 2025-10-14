@@ -79,10 +79,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB        &kp FR_AMPERSAND  &kp FR_PERCENT   &kp FR_LEFT_PARENTHESIS  &kp FR_RIGHT_PARENTHESIS  &kp FR_TILDE    &kp FR_EURO   &kp FR_EXCLAMATION  &kp FR_QUESTION       &kp AT            &kp FR_DEGREE        &kp BSPC
-&kp FR_DOLLAR  &kp DLLR          &kp FR_HASH      &kp FR_LEFT_BRACE        &kp FR_RIGHT_BRACE        &kp FR_PIPE     &kp FR_EQUAL  &kp FR_SQT          &kp FR_DOUBLE_QUOTES  &kp FR_LESS_THAN  &kp FR_GREATER_THAN  &kp GRAVE
-&kp LSHFT      &kp FR_GRAVE      &kp FR_ASTERISK  &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET      &trans          &kp FR_PLUS   &kp FR_MINUS        &kp FR_UNDER          &kp FR_SLASH      &kp FR_BACKSLASH     &kp TILDE
-                                                  &kp LGUI                 &trans                    &kp SPACE       &kp RET       &trans              &kp RALT
+&none  &kp FR_AMPERSAND  &kp FR_PERCENT   &kp FR_LEFT_PARENTHESIS  &kp FR_RIGHT_PARENTHESIS  &kp FR_TILDE    &kp FR_EURO   &kp FR_EXCLAMATION  &kp FR_QUESTION       &kp FR_AT         &kp FR_DEGREE        &none
+&none  &kp FR_DOLLAR     &kp FR_HASH      &kp FR_LEFT_BRACE        &kp FR_RIGHT_BRACE        &kp FR_PIPE     &kp FR_EQUAL  &kp FR_SQT          &kp FR_DOUBLE_QUOTES  &kp FR_LESS_THAN  &kp FR_GREATER_THAN  &none
+&none  &kp FR_GRAVE      &kp FR_ASTERISK  &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET      &trans          &kp FR_PLUS   &kp FR_MINUS        &kp FR_UNDER          &kp FR_SLASH      &kp FR_BACKSLASH     &none
+                                          &kp LGUI                 &trans                    &kp SPACE       &kp RET       &trans              &kp RALT
             >;
         };
 
