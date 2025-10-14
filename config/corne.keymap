@@ -45,10 +45,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp FR_SEMICOLON  &kp FR_COMMA  &kp FR_PERIOD  &kp FR_P                    &kp FR_Y          &kp FR_F                 &kp FR_G                        &kp FR_C  &kp FR_R  &kp FR_L  &none
-&none  &kp FR_A          &kp FR_O      &kp FR_E       &kp FR_U                    &kp FR_I          &kp FR_D                 &kp FR_H                        &kp FR_T  &kp FR_N  &kp FR_S  &none
-&none  &kp FR_COLON      &kp FR_Q      &kp FR_J       &kp FR_K                    &kp FR_X          &kp FR_B                 &kp FR_M                        &kp FR_W  &kp FR_V  &kp FR_Z  &none
-                                       &mo 1          &kp_tap_mo_hold 2 FR_UNDER  &kp LEFT_SHIFT    &kp_tap_mo_hold 3 ENTER  &kp_tap_kp_hold RCTRL FR_SPACE  &kp RALT
+&none  &kp_tap_kp_hold LEFT_ALT FR_SEMICOLON  &kp_tap_kp_hold LEFT_CONTROL FR_COMMA  &kp_tap_mo_hold 6 FR_PERIOD  &kp FR_P                    &kp FR_Y          &kp FR_F                 &kp FR_G                        &kp FR_C  &kp FR_R  &kp_tap_kp_hold LEFT_ALT FR_L  &none
+&none  &kp FR_A                               &kp FR_O                               &kp FR_E                     &kp_tap_mo_hold 4 FR_U      &kp FR_I          &kp FR_D                 &kp_tap_mo_hold 3 FR_H          &kp FR_T  &kp FR_N  &kp FR_S                       &none
+&none  &kp_tap_kp_hold LEFT_GUI FR_COLON      &kp FR_Q                               &kp FR_J                     &kp FR_K                    &kp FR_X          &kp FR_B                 &kp FR_M                        &kp FR_W  &kp FR_V  &kp_tap_kp_hold LEFT_GUI FR_Z  &none
+                                                                                     &mo 1                        &kp_tap_mo_hold 2 FR_UNDER  &kp LEFT_SHIFT    &kp_tap_mo_hold 5 ENTER  &kp_tap_kp_hold RCTRL FR_SPACE  &kp RALT
             >;
         };
 
@@ -62,10 +62,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &bt BT_CLR_ALL    &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE         &kp RET   &trans    &kp RALT
+&none  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6    &kp N7    &kp N8  &kp N9     &kp N0  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &none
+&none  &trans        &trans        &trans        &trans        &bt BT_CLR_ALL    &trans    &trans    &trans  &trans     &trans  &none
+                                   &trans        &trans        &trans            &trans    &trans    &trans
             >;
         };
 
@@ -79,21 +79,54 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp FR_AMPERSAND  &kp FR_PERCENT   &kp FR_LEFT_PARENTHESIS  &kp FR_RIGHT_PARENTHESIS  &kp FR_TILDE    &kp FR_EURO   &kp FR_EXCLAMATION  &kp FR_QUESTION       &kp FR_AT         &kp FR_DEGREE        &none
-&none  &kp FR_DOLLAR     &kp FR_HASH      &kp FR_LEFT_BRACE        &kp FR_RIGHT_BRACE        &kp FR_PIPE     &kp FR_EQUAL  &kp FR_SQT          &kp FR_DOUBLE_QUOTES  &kp FR_LESS_THAN  &kp FR_GREATER_THAN  &none
-&none  &kp FR_GRAVE      &kp FR_ASTERISK  &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET      &trans          &kp FR_PLUS   &kp FR_MINUS        &kp FR_UNDER          &kp FR_SLASH      &kp FR_BACKSLASH     &none
-                                          &kp LGUI                 &trans                    &kp SPACE       &kp RET       &trans              &kp RALT
+&none  &kp_tap_kp_hold LEFT_ALT FR_AMPERSAND  &kp_tap_kp_hold LEFT_CONTROL FR_PERCENT  &kp FR_LEFT_PARENTHESIS  &kp FR_RIGHT_PARENTHESIS  &kp FR_TILDE    &kp FR_EURO   &kp FR_EXCLAMATION  &kp FR_QUESTION       &kp FR_AT         &kp FR_DEGREE        &none
+&none  &kp FR_DOLLAR                          &kp FR_HASH                              &kp FR_LEFT_BRACE        &kp FR_RIGHT_BRACE        &kp FR_PIPE     &kp FR_EQUAL  &kp FR_SQT          &kp FR_DOUBLE_QUOTES  &kp FR_LESS_THAN  &kp FR_GREATER_THAN  &none
+&none  &kp FR_GRAVE                           &kp FR_ASTERISK                          &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET      &trans          &kp FR_PLUS   &kp FR_MINUS        &kp FR_UNDER          &kp FR_SLASH      &kp FR_BACKSLASH     &none
+                                                                                       &trans                   &trans                    &trans          &trans        &trans              &trans
             >;
         };
 
         accents_layer {
             display-name = "Accents";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans          &trans          &kp FR_C_CEDILLA  &kp FR_CARET    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp FR_A_GRAVE  &kp FR_U_GRAVE  &kp FR_E_ACUTE    &kp FR_E_GRAVE  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans          &trans            &trans          &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans            &trans          &trans    &trans  &trans  &trans
             >;
+        };
+
+        numpad_layer {
+            bindings = <
+&trans  &trans  &trans  &kp KP_NUMLOCK  &trans  &trans    &kp FR_EQUAL     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp FR_SQUARE  &trans
+&trans  &trans  &trans  &trans          &none   &trans    &kp FR_PLUS      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp FR_MINUS   &trans
+&trans  &trans  &trans  &trans          &trans  &trans    &kp FR_SLASH     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp FR_PERIOD  &trans
+                        &trans          &trans  &trans    &kp KP_NUMBER_0  &trans           &trans
+            >;
+
+            label = "Numpad";
+        };
+
+        system_layer {
+            bindings = <
+&trans  &trans   &kp_tap_kp_hold LEFT_CONTROL K_PLAY_PAUSE  &kp C_VOL_DN   &kp C_VOL_UP  &kp PRINTSCREEN     &kp PAGE_UP    &kp HOME        &kp UP_ARROW    &kp END          &trans  &trans
+&trans  &kp TAB  &kp LC(LS(F9))                             &kp BACKSPACE  &kp DELETE    &kp LS(LG(FR_S))    &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans   &trans                                     &trans         &trans        &trans              &trans         &kp K_PREVIOUS  &kp K_NEXT      &trans           &trans  &trans
+                                                            &trans         &trans        &trans              &trans         &trans          &trans
+            >;
+
+            label = "System";
+        };
+
+        fn_layout {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F10  &kp F7  &kp F8  &kp F9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F12  &kp F1  &kp F2  &kp F3  &trans  &trans
+                        &trans  &trans  &trans    &trans   &trans  &trans
+            >;
+
+            label = "Fn keys";
         };
     };
 };
