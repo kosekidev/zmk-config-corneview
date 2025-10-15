@@ -38,7 +38,7 @@
         Escape {
             bindings = <&kp ESCAPE>;
             key-positions = <15 14>;
-            timeout-ms = <150>;
+            timeout-ms = <50>;
             layers = <0>;
         };
     };
